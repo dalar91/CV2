@@ -1,0 +1,279 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Color de texto blanco */
+    background-color: #101084; /* Color de fondo de reserva */
+    background-image: url('fondodat.jpg'); /* Imagen de fondo */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Banner superior */
+.banner {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 0px; /* Reducido el padding para hacer el banner más angosto */
+    margin: 0; /* Elimina el margen para ajustarse al borde superior */
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2em; /* Aumentado el tamaño de la fuente */
+    font-weight: bold; /* Haciendo la letra en negrilla */
+    position: fixed; /* Fija el banner en la parte superior de la página */
+    top: 0; /* Posición en el borde superior */
+    left: 0; /* Posición en el borde izquierdo */
+    z-index: 1000; /* Asegura que el banner esté por encima de otros elementos */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-top: 60px; /* Espacio para el banner fijo; ajusta según el alto del banner */
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente para mejorar la legibilidad */
+    border-radius: 10px;
+}
+
+/* Estilos del título */
+h1 {
+    display: none; /* Elimina el título principal que tenía el nombre */
+}
+
+/* Estilo para el contenedor de perfil y redes sociales */
+.profile-and-socials {
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.profile-and-socials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Dividir en 5 columnas */
+    align-items: center; /* Alinear verticalmente los elementos en el centro */
+    gap: 10px; /* Espacio entre las columnas */
+}
+
+.col-profile {
+    text-align: center;
+}
+
+.col-socials {
+    text-align: center;
+}
+
+/* Estilos para los íconos sociales */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los íconos verticalmente en la columna */
+}
+
+.social-icons a {
+    margin: 10px 0; /* Espacio entre los íconos */
+}
+
+.social-icons img {
+    width: 40px;
+    height: auto;
+}
+
+/* Estilos para la imagen del perfil */
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profileImage {
+    max-width: 100%; /* Aumenta el tamaño de la imagen a tres veces su tamaño original */
+    height: auto; /* Mantiene la proporción de la imagen */
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #fff; /* Borde blanco alrededor de la imagen */
+}
+
+/* Estilo para alinear imagen y redes sociales */
+.image-and-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre la imagen y los íconos de redes */
+}
+
+/* Estilos de las secciones */
+section {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente para secciones */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+/* Estilos de los títulos de sección */
+section h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #003366; /* Línea delgada debajo del título en el color especificado */
+    padding-bottom: 10px;
+}
+
+/* Estilos para los párrafos e ítems dentro de cada sección */
+section p, section ul {
+    margin: 0;
+    padding: 0;
+}
+
+section p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
+    line-height: 1.6; /* Mayor altura de línea para mejor lectura */
+    position: relative; /* Para posicionar la línea delgada */
+    padding-bottom: 10px; /* Espacio para la línea delgada */
+}
+
+section p:not(.no-line)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #003366; /* Línea delgada debajo del párrafo en el color especificado */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilo del párrafo introductorio del perfil profesional sin línea */
+section#profile p.intro {
+    border: none; /* Elimina la línea debajo de este párrafo */
+    margin-bottom: 10px; /* Asegura un poco de espacio después del párrafo */
+}
+
+/* Estilos para los ítems de la experiencia laboral */
+.job {
+    margin-bottom: 20px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.8); /* Fondo ligeramente más oscuro para destacar */
+    border-radius: 8px;
+}
+
+.job h3 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+/* Estilos para el logo de la empresa */
+.company-logo {
+    width: 100px; /* Ajusta el tamaño según tu preferencia */
+    vertical-align: middle;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+    padding: 10px;
+}
+
+/* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain; /* Asegura que la imagen se ajuste bien en el modal */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Estilo del aviso de copyright */
+.footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366; /* Igual al color del banner */
+    color: #fff;
+    z-index: 1000; /* Asegura que el pie de página esté encima de otros elementos */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+/* Asegura que el texto no tenga margen extra */
+.footer p {
+    margin: 0; /* Elimina el margen para asegurar que el texto esté centrado */
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente si es necesario */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .social-icons img {
+        width: 25px; /* Ajusta el tamaño de los íconos en pantallas más pequeñas */
+    }
+
+    .company-logo {
+        width: 80px; /* Ajusta el tamaño de los logos de las empresas en pantallas más pequeñas */
+    }
+}
+
+/* Estilos para los logos de educación */
+.university-logo, .platzi-logo {
+    margin-left: 10px; /* Espacio entre el texto y el logo */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.university-logo {
+    height: 50px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.platzi-logo {
+    height: 45px; /* Ajusta el tamaño según tus necesidades */
+    padding: 5px;
+}
+
+/* Estilo para los logos que pueden ser clickeados */
+.expandable {
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre la imagen */
+}
+
+/* Estilo para el botón "Guardar como PDF" */
+#saveAsPdf {
+    position: fixed;
+    top: 60px; /* Ajusta la posición dependiendo del tamaño del banner y el padding */
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #003366; /* Igual al color del banner */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+    font-size: 1em;
+}
+
+#saveAsPdf:hover {
+    background-color: #002244; /* Color más oscuro al pasar el cursor */
+}

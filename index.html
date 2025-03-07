@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Alexander La Rotta</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+        }
+        .language-selector {
+            margin: 20px;
+        }
+        .language-selector label {
+            margin-right: 10px;
+        }
+        .language-selector select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <p>Ingeniero Debbie Alexander La Rotta Rodríguez</p>
+    </div>
+
+    <!-- Botón "Guardar como PDF" -->
+    <button id="saveAsPdf" title="Haz click aquí para guardar la página como un documento en PDF">Guardar como PDF</button>
+
+    
+    <div class="container">
+        <header>
+            <!-- Sección de imagen de perfil y redes sociales en un tablero de cinco columnas -->
+            <div class="profile-and-socials">
+                <div class="profile-and-socials-grid">
+                    <div class="col-empty"></div>
+                    <div class="col-profile">
+                        <img id="profileImage" src="Alex.jpg" alt="Foto de perfil de Alexander La Rotta" class="expandable" onclick="openModal(this)" title="Foto de perfil">
+                    </div>
+                    <div class="col-empty"></div>
+                    <div class="col-socials">
+                        <div class="social-icons">
+                            <a href="https://wa.me/573212595638?text=Hola%20Alexander%2C%20espero%20est%C3%A9s%20muy%20bien%2C%20soy%20%28Escribe%20aqui%20tu%20nombre%29%2C%20te%20escribo%20en%20nombre%20de%20%28Nombre%20de%20la%20empresa%29%20ya%20que%20nos%20interes%C3%B3%20bastante%20tu%20perfil%2C%20estar%C3%ADa%20encantando%28a%29%20de%20que%20podamos%20reunirnos%20para%20hablarte%20sobre%20una%20vacante%20que%20tenemos%20en%20estos%20momentos%20en%20el%20%C3%A1rea%20de%20%28Escribe%20aqui%20el%20%C3%A1rea%29%2C%20para%20el%20cargo%20de%20%28Escribe%20aqui%20el%20cargo%20a%20postular%29" target="_blank" class="social-icon whatsapp-icon" title="WhatsApp">
+                                <img src="Wht.png" alt="Icono de WhatsApp">
+                            </a>
+                            <a href="mailto:dalexanderlarotta@outlook.com?subject=Oferta%20y/o%20contratación%20laboral&body=Hola%20Alexander,%20espero%20estés%20muy%20bien,%20soy%20%28Escribe%20aquí%20tu%20nombre%29,%20te%20escribo%20en%20nombre%20de%20%28Nombre%20de%20la%20empresa%29%20ya%20que%20nos%20interesó%20bastante%20tu%20perfil,%20estaría%20encantado(a)%20de%20que%20podamos%20reunirnos%20para%20hablarte%20sobre%20una%20vacante%20que%20tenemos%20en%20estos%20momentos%20en%20el%20área%20de%20%28Escribe%20aquí%20el%20área%29,%20para%20el%20cargo%20de%20%28Escribe%20aquí%20el%20cargo%20a%20postular%29" title="Correo Electrónico">
+                                <img src="outlook-logo.png" alt="Icono de Outlook">
+                            </a>
+                            <a href="https://www.linkedin.com/in/debbie-alexander-la-rotta-rodriguez/" target="_blank" title="LinkedIn">
+                                <img src="LinkedIn.webp" alt="Icono de LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-empty"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección de Perfil Profesional -->
+        <section class="profile">
+            <h2>Perfil Profesional</h2>
+            <p class="no-line">Soy Ingeniero Industrial con una sólida trayectoria en análisis de datos y una profunda experiencia en Business Intelligence y Data Management. He liderado el desarrollo y la gestión de KPIs, optimizado procesos y aplicado análisis estratégico de datos para impulsar la eficiencia organizacional y la toma de decisiones informadas.</p>
+            <p class="no-line">En mi puesto anterior en Equipos y Servicios Trex LATAM, desempeñé un papel crucial en el análisis de datos para el área comercial y de producto, centrado en grandes clientes empresariales en un entorno B2B. Además, mi experiencia en entornos B2C me ha permitido trabajar con una amplia gama de clientes y adaptar estrategias para mejorar la experiencia del consumidor, optimizando campañas y procesos para lograr una mayor satisfacción y lealtad del cliente.</p>
+            <p>Logros Clave:</p>
+            <ul>
+                <li>Implementé estrategias de ventas basadas en datos que mejoraron significativamente nuestras tácticas comerciales y aumentaron la satisfacción del cliente en un [porcentaje específico o resultado medible si es posible].</li>
+                <li>Desarrollé e implementé soluciones analíticas que optimizaron la toma de decisiones y aumentaron la eficiencia operativa en entornos tanto B2B como B2C.</li>
+            </ul>
+            <p>Habilidades Destacadas:</p>
+            <ul>
+                <li>Herramientas Office: Experto en Excel, PowerPoint y Word, con programación avanzada en VBA.</li>
+                <li>Power BI: Creación de informes y dashboards interactivos para una visualización efectiva de datos.</li>
+                <li>SQL y Python: Competente en el análisis de datos y consultas avanzadas utilizando SQL y Python.</li>
+                <li>SAP y CRM: Experiencia en la gestión de SAP y análisis de datos con sistemas CRM.</li>
+            </ul>
+            <p>Áreas de Especialización:</p>
+            <ul>
+                <li>Análisis Avanzado de Datos: Implementación de técnicas avanzadas para decisiones estratégicas.</li>
+                <li>Gestión de Inventarios: Optimización de la eficiencia operativa y gestión precisa de inventarios.</li>
+                <li>Optimización de Procesos: Aplicación de metodologías para la mejora continua y la reducción de costos.</li>
+                <li>Estudio de Tiempos y Movimientos: Análisis detallado para la optimización de recursos y procesos.</li>
+                <li>Estrategias B2C: Desarrollo y ejecución de estrategias centradas en el cliente para mejorar la experiencia y fidelización.</li>
+            </ul>
+            <p class="no-line">Mi formación y experiencia en entornos B2B y B2C me han proporcionado una visión integral y habilidades analíticas robustas, permitiéndome contribuir significativamente a la mejora continua y a la eficiencia organizacional en una variedad de contextos.</p>
+        </section>
+
+        <!-- Sección de Experiencia Laboral -->
+        <section class="experience">
+            <h2>Experiencia Laboral</h2>
+            <!-- Trabajo 1 -->
+            <div class="job">
+                <h3>Analista De Producto Y Comercial</h3>
+                <p>Equipos Y Servicios Trex Latam - Marzo 2023 - Junio 2024</p>
+                <img src="tr.png" alt="Logo de Empresa" class="expandable company-logo" onclick="openModal(this)" title="Última experiencia laboral">
+                <ul>
+                    <li>Analizar datos de reportes sobre nuevas oportunidades para el área de producto Prime LATAM.</li>
+                    <li>Apoyar en la elaboración de propuestas de valor para las diferentes líneas del portafolio de productos LATAM.</li>
+                    <li>Crear datasheets personalizados para los distintos equipos del portafolio.</li>
+                    <li>Realizar análisis de inteligencia comercial para las marcas del portafolio.</li>
+                    <li>Analizar, coordinar y diseñar mejoras de procesos, objetivos y metas del área a través de indicadores de gestión.</li>
+                </ul>
+            </div>
+            <!-- Trabajo 2 -->
+            <div class="job">
+                <h3>Ingeniero Industrial Practicante</h3>
+                <p>Johnson Controls - Marzo 2022 - Agosto 2022</p>
+                <img src="jc.png" alt="Logo de Empresa" class="expandable company-logo" onclick="openModal(this)" title="Penúltima experiencia laboral">
+                <ul>
+                    <li>Crear formatos para diferentes procesos comerciales mediante el uso de macros y VBA.</li>
+                    <li>Diseñar y mantener repositorios para la recolección de documentos, experiencias y documentos legales.</li>
+                    <li>Realizar el levantamiento y mejoramiento de procesos administrativos.</li>
+                    <li>Apoyar en la preparación y gestión de licitaciones a nivel nacional.</li>
+                    <li>Gestionar el alta de proveedores ante clientes, incluyendo la recolección de documentos, diligenciamiento y carga de formatos.</li>
+                </ul>
+            </div>
+            <!-- Trabajo 3 -->
+            <div class="job">
+                <h3>Analista Administrativo</h3>
+                <p>Telefónica - Abril 2018 - Noviembre 2020</p>
+                <img src="te.png" alt="Logo de Empresa" class="expandable company-logo" onclick="openModal(this)" title="Antepenúltima experiencia laboral">
+                <ul>
+                    <li>Controlar y gestionar la base de datos de hurtos, asegurando la integridad y actualización de la información.</li>
+                    <li>Automatizar la presentación de informes mediante el uso de macros y VBA.</li>
+                    <li>Elaborar informes detallados sobre el índice de seguridad en los diferentes sitios de Telefónica a nivel nacional, utilizando herramientas analíticas para identificar patrones y tendencias.</li>
+                    <li>Administrar la documentación para las reuniones de facturación con proveedores, utilizando análisis de datos para garantizar precisión y coherencia.</li>
+                </ul>
+            </div>
+            <!-- Trabajo 4 -->
+            <div class="job">
+                <h3>Ingeniero Industrial Practicante</h3>
+                <p>Coltanques Sas - Enero 2017 - Julio 2017</p>
+                <img src="co.png" alt="Logo de Empresa" class="expandable company-logo" onclick="openModal(this)" title="Tras penúltima experiencia laboral">
+                <ul>
+                    <li>Elaborar manuales de funciones para todos los cargos a nivel nacional, incorporando análisis de datos para identificar y definir responsabilidades clave basadas en el rendimiento y las necesidades operativas.</li>
+                    <li>Automatizar y estandarizar procesos administrativos mediante herramientas de software.</li>
+                    <li>Desarrollar y mantener indicadores de gestión para evaluar la eficiencia de las operaciones.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección de Educación -->
+        <section class="education">
+            <h2>Educación</h2>
+            <ul>
+                <li>
+                    Título profesional en ingeniería industrial - Universidad Jorge Tadeo Lozano - 2017 - 2022
+                    <img src="ut.png" alt="Logo de Universidad" class="expandable university-logo" onclick="openModal(this)" title="La grandiosa universidad Jorge Tadeo Lozano">
+                </li>
+                <li>
+                    Business Intelligence y Data Management - Platzi - 2024
+                    <img src="pl.png" alt="Logo de Platzi" class="expandable platzi-logo" onclick="openModal(this)" title="Academia Platzi">
+                </li>
+                <li>
+                    Análisis De Decisiones De Negocio Con Datos - Platzi - 2024
+                    <img src="pl.png" alt="Logo de Platzi" class="expandable platzi-logo" onclick="openModal(this)" title="Academia Platzi">
+                </li>
+                <li>
+                    Curso De Gestión De Equipos Ágiles - Platzi - 2023
+                    <img src="pl.png" alt="Logo de Platzi" class="expandable platzi-logo" onclick="openModal(this)" title="Academia Platzi">
+                </li>
+                <li>
+                    Curso De Excel Avanzado Para Análisis De Datos - Platzi - 2023
+                    <img src="pl.png" alt="Logo de Platzi" class="expandable platzi-logo" onclick="openModal(this)" title="Academia Platzi">
+                </li>
+                <li>
+                    Domina Excel - Platzi - 2023
+                    <img src="pl.png" alt="Logo de Platzi" class="expandable platzi-logo" onclick="openModal(this)" title="Academia Platzi">
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Análisis de datos con Excel (estudiando SQL, Python)</li>
+                <li>Creación de dashboards e informes con Power BI</li>
+                <li>Desarrollo de macros y automatización en Excel</li>
+                <li>Gestión de proyectos y trabajo en equipo</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Idiomas -->
+        <section class="languages">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español - Nativo</li>
+                <li>Inglés - B1-B2</li>
+                <li>Portugués - B1-B2</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Hobbies -->
+        <section class="hobbies">
+            <h2>Hobbies</h2>
+            <p>Resolución de Rompecabezas y Juegos de Lógica</p>
+            <p class="no-line">Me apasiona resolver rompecabezas y participar en juegos de lógica, lo cual mejora mi capacidad para analizar datos y resolver problemas complejos. Estas actividades han agudizado mi atención al detalle y mi pensamiento crítico, habilidades clave que aplico en mi rol como analista de datos para interpretar y transformar información en insights valiosos.</p>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="profileModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" alt="Imagen ampliada de perfil">
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Alexander La Rotta - Ingeniero Industrial. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el Modal -->
+    <script>
+        // Obtener elementos del DOM
+        var modal = document.getElementById("profileModal");
+        var modalImg = document.getElementById("img01");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Función para abrir el modal
+        function openModal(image) {
+            modal.style.display = "flex"; // Usar "flex" para centrar el contenido
+            modalImg.src = image.src; // Asegura que el src del modal se actualice con la imagen clickeada
+        }
+
+        // Función para cerrar el modal cuando se hace clic en el botón de cierre
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Función para cerrar el modal cuando se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+    
+    <!-- Incluye html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
